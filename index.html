@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Ultra Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>🍽️ Restaurant Ultra Pro</h1>
+</header>
+
+<div class="container">
+
+<section id="loginSection">
+<h2>Connexion</h2>
+<input type="text" id="username" placeholder="Nom utilisateur">
+<input type="password" id="password" placeholder="Mot de passe">
+<button onclick="login()">Se connecter</button>
+</section>
+
+<section id="adminSection" style="display:none;">
+<h2>👨‍🍳 Espace Admin</h2>
+<input type="text" id="name" placeholder="Nom du plat">
+<input type="number" id="price" placeholder="Prix">
+<button onclick="addDish()">Ajouter</button>
+</section>
+
+<section>
+<h2>Menu</h2>
+<ul id="menu"></ul>
+</section>
+
+<section>
+<h2>🛒 Commandes</h2>
+<ul id="orders"></ul>
+</section>
+
+<section>
+<h2>📊 Statistiques</h2>
+<p id="stats"></p>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
