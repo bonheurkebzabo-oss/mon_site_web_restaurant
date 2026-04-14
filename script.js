@@ -48,8 +48,7 @@ m.appendChild(li);
 orders.forEach((d,i)=>{
 let li=document.createElement("li");
 li.innerHTML=`${d.name} - ${d.price} FCFA
-<button onclick="pay(${i})">Payer</button>`;
-o.appendChild(li);
+<button <button onclick="login()">Se connecter</button>
 });
 
 updateStats();
