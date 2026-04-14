@@ -1,4 +1,17 @@
-let menu = JSON.parse(localStorage.getItem("menu"))||[];
+<script>
+function login() {
+  const email = document.querySelector("input[type=text]").value;
+  const password = document.querySelector("input[type=password]").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      alert("Connexion réussie !");
+    })
+    .catch(error => {
+      alert(error.message);
+    });
+}
+</script>let menu = JSON.parse(localStorage.getItem("menu"))||[];
 let orders = JSON.parse(localStorage.getItem("orders"))||[];
 let user = null;
 
