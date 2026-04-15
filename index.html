@@ -44,23 +44,32 @@
 
 </div>
 
-<script src="script.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+<!-- FIREBASE COMPLET CONFIGURÉ -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-<script>
 const firebaseConfig = {
-  apiKey: "ICI",
-  authDomain: "ICI",
-  projectId: "ICI",
-  storageBucket: "ICI",
-  messagingSenderId: "ICI",
-  appId: "ICI"
+  apiKey: "AIzaSyDiehxe-ELUzWcjQObwf7fObUgAQM8SCjg",
+  authDomain: "restaurant-4567e.firebaseapp.com",
+  projectId: "restaurant-4567e",
+  storageBucket: "restaurant-4567e.firebasestorage.app",
+  messagingSenderId: "494193563441",
+  appId: "1:494193563441:web:ca608e6161fe2784628210"
 };
 
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
+// Initialisation Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// rendre accessible dans script.js
+window.auth = auth;
+window.db = db;
 </script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
